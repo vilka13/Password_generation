@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      body {
+        background-image: url("https://i.postimg.cc/HLdwZnkK/1636920747-1-bogatyr-club-p-fon-dlya-prilozheniya-1.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Password Generator</h1>
+      <form action="{% url 'password' %}">
+        <div class="form-group">
+          <label for="length">Length:</label>
+          <select id="length" name="length" class="form-control">
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12" selected="selected">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+          </select>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="uppercase" name="uppercase" class="form-check-input">
+          <label for="uppercase" class="form-check-label">Uppercase</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="numbers" name="numbers" class="form-check-input">
+          <label for="numbers" class="form-check-label">Numbers</label>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="special" name="special" class="form-check-input">
+          <label for="special" class="form-check-label">Special Characters</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Generate Password</button>
+      </form>
+    </div>
+  </body>
+</html>
